@@ -1,0 +1,131 @@
+body {
+    background-color: #17151C;
+    color: white;
+}
+
+.logo {
+    width: 200px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-left: 0px;
+
+}
+
+.log {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 60px;
+    margin-right: 100px;
+    text-align: right;
+}
+
+.log:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#start {
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(135deg,
+            #F39AB9 0%,
+            #E85C88 50%,
+            #C94676 100%);
+
+}
+
+#start:hover {
+
+    transform: translateY(-5px) scale(1.05);
+    text-decoration: underline;
+    background: #E85C88;
+
+}
+
+#AI {
+    width: 120px;
+    object-fit: contain;
+    vertical-align: right;
+    margin-left: 100px;
+    margin-top: 50px;
+    color: #C85A8E;
+    background: linear-gradient(135deg,
+            #F39AB9 0%,
+            #17151C 50%,
+            #29252F 100%);
+    border: none;
+    border-radius: 7px;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 7% 60px 8%;
+    background: #17151C;
+    overflow: hidden;
+}
+
+.hero-text {
+    width: 48%;
+    z-index: 2;
+}
+
+.hero-text h2 {
+    font-size: 70px;
+    line-height: 1.05;
+    margin: 25px 0;
+    font-family: 'Arial', sans-serif;
+    color: #F5EFF2;
+}
+
+.hero-text h2 span {
+    color: #E85C88;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #AAA3AC;
+    max-width: 520px;
+}
+
+.ai-badge {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid #E85C88;
+    border-radius: 30px;
+    color: #F5EFF2;
+    background: rgba(232, 92, 136, 0.08);
+}
+
+.hero-text button {
+    margin-top: 25px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #E85C88;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hero-image {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    object-fit: contain;
+}
