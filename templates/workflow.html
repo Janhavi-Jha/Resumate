@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="" en">
+<html>
+
+<head>
+    <title>Resumate bhosdi ka ek number ka jhaatu raand hai yarr
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <img class="logo" src="{{ url_for('static', filename='images/logo_resume.png') }}" alt="logo">
+    <a class="log" href="{{ url_for('home') }}">Home</a>
+    <a class="log" href="{{ url_for('features') }}">Features</a>
+    <a class="log" href="{{ url_for('workflow') }}">How It Works</a>
+    <a class="log" href="{{ url_for('about') }}">About</a>
+    <button id="start">Get Started</button>
+    <div class="workflow-heading">
+        <h1>
+            How <span>Resumate</span> Works
+        </h1>
+        <p>From your resume to actionable insights in four simple steps.</p>
+
+    </div>
+    <div class="workflow-steps">
+
+        <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-card">
+                <h3>Upload Resume</h3>
+                <span></span>
+                <p>Upload your resume in PDF format. Your data stays safe and secure.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-card">
+                <h3>Extract Content</h3>
+                <span></span>
+                <p>Our system extracts text and important details from your resume.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-card">
+                <h3>AI Analysis</h3>
+                <span></span>
+                <p>AI evaluates your resume against ATS and industry best practices.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">04</div>
+            <div class="step-card">
+                <h3>Get Insights</h3>
+                <span></span>
+                <p>Receive scores, strengths, gaps and personalized improvements.</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="ready-text">
+        <h2>Ready to see what <span>your resume</span> is missing?</h2>
+        <p>Let ResuMate turn your resume into better opportunities.</p>
+        <a href="upload.html" class="ready-btn">
+            Analyze My Resume →
+        </a>
+    </div>

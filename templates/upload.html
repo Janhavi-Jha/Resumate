@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ResuMate AI - Upload Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='upload-style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <!-- Logo -->
+        <div class="logo">
+
+            <img src="{{ url_for('static', filename='images/logo_resume.png') }}">
+        </div>
+
+
+        <!-- Navigation -->
+        <nav>
+
+            <!-- Upload Resume -->
+            <a href="index.html" class="active">
+
+                <span>⇧</span>
+
+                Upload Resume
+
+            </a>
+
+
+            <!-- Dashboard -->
+            <a href="#">
+
+                <span>▣</span>
+
+                Dashboard
+
+            </a>
+
+
+            <!-- Analysis History -->
+            <a href="#">
+
+                <span>▤</span>
+
+                Analysis History
+
+            </a>
+
+
+            <!-- Tips & Resources -->
+            <a href="#">
+
+                <span>💡</span>
+
+                Tips & Resources
+
+            </a>
+
+
+            <!-- Settings -->
+            <a href="settings.html">
+
+                <span>⚙</span>
+
+                Settings
+
+            </a>
+
+        </nav>
+
+
+        <!-- Logout -->
+        <a href="#" class="logout">
+
+            <span>↪</span>
+
+            Logout
+
+        </a>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <div class="content">
+
+
+            <!-- Heading -->
+            <h1>Upload Your Resume</h1>
+
+
+            <!-- Subtitle -->
+            <p class="subtitle">
+
+                Upload your resume in PDF format and let AI analyze it.
+
+            </p>
+
+
+
+            <!-- ================= UPLOAD BOX ================= -->
+
+            <div class="upload-box">
+
+
+                <!-- Cloud Icon -->
+                <div class="cloud-icon">
+
+                    ☁
+
+                </div>
+
+
+                <!-- Drag Text -->
+                <p class="drag-text">
+
+                    Drag & Drop your PDF here
+
+                </p>
+
+
+                <!-- OR -->
+                <p class="or">
+
+                    or
+
+                </p>
+
+
+                <!-- Browse Button -->
+                <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+
+                    <input type="file" name="resume" id="resumeFile" accept=".pdf">
+
+                    <button type="submit" class="analyze-btn">
+                        ✨ &nbsp; Analyze Resume
+                    </button>
+
+                </form>
+
+
+                <!-- File Size -->
+                <p class="limit">
+
+                    Maximum file size: 5MB
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ================= ANALYZE BUTTON ================= -->
+
+
+
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

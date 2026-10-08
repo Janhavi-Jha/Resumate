@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+
+<body>
+    <img src="{{ url_for('static', filename='images/logo_resume.png') }}" alt="Resumate Logo" class="logo">
+    <main class="analysis-page">
+
+        <header class="page-header">
+            <div>
+                <h1>Resume Analysis Report</h1>
+                <p>Your resume has been analyzed based on its content.</p>
+            </div>
+
+            <button class="download-btn" id="downloadBtn">
+                Download Report
+            </button>
+        </header>
+
+        <section class="score-cards">
+            <div class="score-card">
+                <h3>Resume Score</h3>
+                <div class="score-circle purple-circle" id="resumeCircle">
+                    <span id="resumeScore">--</span>
+                </div>
+                <div class="score-label">
+                    <span id="resumeStatus">Analyzing..</span>
+                    <span>/100</span>
+                </div>
+            </div>
+
+            <div class="score-card">
+                <h3>ATS Score</h3>
+                <div class="score-circle orange-circle" id="atsCircle">
+                    <span id="atsScore">--</span>
+                </div>
+                <div class="score-label">
+                    <span id="atsStatus">Analyzing..</span>
+                    <span>/100</span>
+                </div>
+            </div>
+
+            <div class="score-card">
+                <h3>Skills Match</h3>
+                <div class="score-circle green-circle" id="skillsCircle">
+                    <span id="skillsScore">--</span>
+                </div>
+                <div class="score-label">
+                    <span id="skillsStatus">Analyzing..</span>
+                    <span>/100</span>
+                </div>
+            </div>
+
+            <div class="score-card">
+                <h3>Readability</h3>
+                <div class="score-circle purple-circle" id="readabilityCircle">
+                    <span id="readabilityScore">--</span>
+                </div>
+                <div class="score-label">
+                    <span id="readabilityStatus">Analyzing..</span>
+                    <span>/100</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="middle-section">
+            <div class="info-card">
+                <h2 class="green-heading">
+                    ● &nbsp; Strengths
+                </h2>
+                <ul id="strengthsList">
+                    <li>Analyzing your resume..</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2 class="orange-heading">
+                    ⚠ &nbsp; Areas for Improvement
+                </h2>
+                <ul id="improvementsList">
+                    <li>Analyzing your resume..</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2 class="pink-heading">
+                    ● &nbsp; Missing Skills
+                </h2>
+                <div class="skills-container" id="missingSkills">
+                    <span>Analyzing..</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-section">
+            <div class="info-card ai-card">
+                <h2 class="purple-heading">
+                    ✦ &nbsp; Suggestions
+                </h2>
+                <ul id="suggestionsList">
+                    <li>Analyzing your resume..</li>
+                </ul>
+            </div>
+
+            <div class="info-card preview-card">
+                <h2 class="purple-heading">
+                    ◉ &nbsp; Resume Preview
+                </h2>
+                <p>
+                    View the resume content that was analyzed.
+                </p>
+                <button class="preview-btn" id="previewBtn">
+                    ◉ &nbsp; Preview Resume
+                </button>
+            </div>
+        </section>
+    </main>
+    <script id="analysis-data" type="application/json">
+    {{ analysis | tojson }}
+</script>
+    <script src="{{ url_for('static', filename='result.js') }}"></script>
+</body>
+
+</html>

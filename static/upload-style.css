@@ -1,0 +1,548 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f7fb;
+    color: #171722;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+
+    background-color: #11111f;
+    color: white;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    padding: 25px 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo img {
+    width: 200px;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #c5c5d0;
+
+    padding: 13px 12px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+nav a span {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+nav a.active {
+    background-color: #7d29b5;
+    color: white;
+}
+
+nav a:hover {
+    background-color: #242432;
+    color: white;
+}
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logout {
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #c5c5d0;
+
+    padding: 12px;
+}
+
+.logout:hover {
+    color: white;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    padding: 45px 50px;
+}
+
+.content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+h1 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777783;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   UPLOAD BOX
+========================= */
+
+.upload-box {
+    background-color: white;
+
+    border: 2px dashed #c9a5df;
+
+    border-radius: 12px;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.cloud-icon {
+    font-size: 45px;
+
+    color: #8e2cd4;
+
+    margin-bottom: 15px;
+}
+
+.drag-text {
+    font-size: 17px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.or {
+    color: #888;
+
+    margin-bottom: 15px;
+}
+
+.browse-btn {
+    background-color: #8e2cd4;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 11px 22px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.browse-btn:hover {
+    background-color: #7620b5;
+}
+
+.limit {
+    margin-top: 15px;
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   ANALYZE BUTTON
+========================= */
+
+.analyze-btn {
+    display: block;
+
+    margin: 25px auto;
+
+    background-color: #8e2cd4;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 13px 28px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.analyze-btn:hover {
+    background-color: #7620b5;
+}
+
+
+/* =========================
+   SETTINGS BOX
+========================= */
+
+.settings-box,
+.dashboard-box {
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 22px;
+
+    margin-bottom: 18px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.settings-box h2,
+.dashboard-box h2 {
+    font-size: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    outline: none;
+
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #8e2cd4;
+}
+
+
+/* =========================
+   SETTING ROW
+========================= */
+
+.setting-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.setting-row h3 {
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.setting-row p {
+    font-size: 12px;
+
+    color: #888;
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.setting-row input,
+.check-option input {
+    accent-color: #8e2cd4;
+}
+
+.check-option {
+    display: block;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.save-btn {
+    background-color: #8e2cd4;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 12px 25px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+.save-btn:hover {
+    background-color: #7620b5;
+}
+
+
+/* =========================
+   PRIVACY
+========================= */
+
+.danger h2 {
+    color: #333;
+}
+
+.delete-btn {
+    border: 1px solid #e05252;
+
+    background-color: white;
+
+    color: #d63c3c;
+
+    padding: 10px 15px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #fff5f5;
+}
+
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.dashboard-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    text-align: center;
+}
+
+.dashboard-card h2 {
+    color: #8e2cd4;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.dashboard-card p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.empty-message {
+    color: #888;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+.dashboard-upload-btn {
+    display: inline-block;
+
+    background-color: #8e2cd4;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px 18px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+}
+
+.dashboard-upload-btn:hover {
+    background-color: #7620b5;
+}
+
+
+/* =========================
+   QUICK TIPS
+========================= */
+
+.tip {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+.tip span {
+    color: #8e2cd4;
+
+    font-weight: bold;
+}
+
+.tip p {
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        margin-left: 210px;
+
+        padding: 30px 20px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}

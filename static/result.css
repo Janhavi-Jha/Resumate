@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7fb;
+    color: #292934;
+}
+.analysis-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 28px 35px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.page-header h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.page-header p {
+    font-size: 13px;
+    color: #888895;
+}
+.download-btn {
+    background: white;
+    border: 1px solid #d9a8ef;
+    color: #a43bd7;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-size: 11px;
+    cursor: pointer;
+}
+.download-btn:hover {
+    background: #faf0ff;
+}
+
+.score-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 15px;
+}
+.score-card {
+    background: white;
+    border: 1px solid #eeeeF3;
+    border-radius: 10px;
+    min-height: 175px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+.score-card h3 {
+    font-size: 11px;
+    font-weight: 600;
+    color: #3e3e48;
+    margin-bottom: 10px;
+}
+
+.score-circle {
+    --score: 80%;
+    --circle-color: #b13ddd;
+
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    margin: 0 auto 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    background: conic-gradient(
+        var(--circle-color) var(--score),
+        #eeeeef var(--score)
+    );
+}
+.score-circle::before {
+    content: "";
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    background: white;
+    border-radius: 50%;
+}
+.score-circle span {
+    position: relative;
+    z-index: 2;
+    font-size: 21px;
+    font-weight: 700;
+    color: #30303a;
+}
+.purple-circle {
+    --circle-color: #b13ddd;
+}
+.orange-circle {
+    --circle-color: #f0a03a;
+}
+.green-circle {
+    --circle-color: #46b77b;
+}
+
+.score-label {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    font-size: 9px;
+    color: #9999a4;
+}
+.good {
+    color: #40ae73;
+}
+.warning {
+    color: #e99a2f;
+}
+.average {
+    color: #40ae73;
+}
+.excellent {
+    color: #39aa70;
+}
+
+.middle-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    gap: 14px;
+    margin-bottom: 15px;
+}
+
+.info-card {
+    background: white;
+    border: 1px solid #eeeeF3;
+    border-radius: 10px;
+    padding: 17px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+.info-card h2 {
+    font-size: 12px;
+    margin-bottom: 13px;
+    font-weight: 600;
+}
+.green-heading {
+    color: #36a96d;
+}
+.orange-heading {
+    color: #e8992d;
+}
+.pink-heading {
+    color: #dc4d7c;
+}
+.purple-heading {
+    color: #a33bd7;
+}
+
+.info-card ul {
+    padding-left: 17px;
+}
+.info-card li {
+    color: #686874;
+    font-size: 10px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.skills-container span {
+    background: #fbeefa;
+    color: #bc438f;
+    padding: 6px 9px;
+    border-radius: 14px;
+    font-size: 9px;
+}
+
+.bottom-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 14px;
+}
+.ai-card {
+    min-height: 150px;
+}
+
+.preview-card p {
+    font-size: 10px;
+    color: #777783;
+    line-height: 1.4;
+    margin-bottom: 17px;
+}
+.preview-btn {
+    width: 100%;
+    padding: 9px;
+    background: white;
+    border: 1px solid #c88de6;
+    border-radius: 7px;
+    color: #a33bd7;
+    font-size: 10px;
+    cursor: pointer;
+}
+.preview-btn:hover {
+    background: #fbf1ff;
+}
+
+@media (max-width: 900px) {
+    .score-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .middle-section {
+        grid-template-columns: 1fr;
+    }
+    .bottom-section {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .analysis-page {
+        padding: 20px;
+    }
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .score-cards {
+        grid-template-columns: 1fr;
+    }
+}
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}

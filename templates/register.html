@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resumate - Sign Up</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='register-style.css') }}">
+</head>
+
+<body>
+
+    <div class="register-container">
+
+        <!-- LEFT SIDE -->
+        <div class="register-left">
+
+            <div class="brand">
+
+                <img src="{{ url_for('static',
+                    filename='images/logo_resume.png') }}" alt="Resumate Logo">
+
+
+
+            </div>
+
+            <h2>Build a Better Resume,<br>Build a Better Future.</h2>
+
+            <p>
+                Create your account and let AI help you
+                improve your resume and career opportunities.
+            </p>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="register-right">
+
+            <div class="register-box">
+
+                <h1>Create Account</h1>
+
+                <p class="register-subtitle">
+                    Join Resumate today
+                </p>
+
+
+                <form action="{{ url_for('register') }}" method="POST">
+
+                    <!-- NAME -->
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+                    <div class="form-group">
+
+                        <label for="confirm_password">
+                            Confirm Password
+                        </label>
+
+                        <input type="password" id="confirm_password" name="confirm_password"
+                            placeholder="Confirm your password" required>
+
+                    </div>
+
+
+                    <button type="submit" class="register-btn">
+                        Create Account
+                    </button>
+
+                </form>
+
+
+                <p class="login-text">
+
+                    Already have an account?
+
+                    <a href="{{ url_for('login') }}">
+                        Login
+                    </a>
+
+                </p>
+
+
+                <a href="{{ url_for('home') }}" class="back-home">
+                    ← Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

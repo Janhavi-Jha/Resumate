@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #17151C;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* MAIN CONTAINER */
+
+.register-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* LEFT SIDE */
+
+.register-left {
+    width: 50%;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #17151C;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 70px;
+}
+
+.brand img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.brand h1 {
+    font-size: 30px;
+}
+
+.register-left h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.register-left p {
+    color: #b8b4bd;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+
+/* RIGHT SIDE */
+
+.register-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #211E27;
+}
+
+
+/* REGISTER BOX */
+
+.register-box {
+    width: 450px;
+    padding: 45px;
+}
+
+.register-box h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.register-subtitle {
+    color: #aaa6af;
+    margin-bottom: 30px;
+}
+
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #3a3640;
+    border-radius: 8px;
+    background: #17151C;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: #E85C88;
+}
+
+
+/* BUTTON */
+
+.register-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #E85C88;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* LOGIN LINK */
+
+.login-text {
+    text-align: center;
+    margin-top: 25px;
+    color: #aaa6af;
+}
+
+.login-text a {
+    color: #E85C88;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* BACK HOME */
+
+.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+
+    color: #aaa6af;
+    text-decoration: none;
+}
+
+.back-home:hover {
+    color: #E85C88;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .register-container {
+        flex-direction: column;
+    }
+
+    .register-left,
+    .register-right {
+        width: 100%;
+    }
+
+    .register-left {
+        padding: 40px;
+    }
+
+    .register-left h2 {
+        font-size: 32px;
+    }
+
+    .register-box {
+        width: 100%;
+        padding: 40px;
+    }
+}

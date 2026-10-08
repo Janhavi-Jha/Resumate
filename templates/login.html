@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resumate - Login</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='login-style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <div class="login-container">
+
+        <!-- Left Section -->
+        <div class="login-left">
+
+            <div class="brand">
+
+                <img src="{{ url_for('static',
+                    filename='images/logo_resume.png') }}" alt="Resumate Logo">
+
+
+
+            </div>
+
+            <h2>Smarter Resume,<br>Better Opportunities.</h2>
+
+            <p>
+                Let AI review your resume and help you
+                improve your career opportunities.
+            </p>
+
+        </div>
+
+
+        <!-- Right Section -->
+        <div class="login-right">
+
+            <div class="login-box">
+
+                <h1>Welcome Back!</h1>
+
+                <p class="login-subtitle">
+                    Login to continue to Resumate
+                </p>
+
+
+                <!-- Login Form -->
+                <form action="{{ url_for('login') }}" method="POST">
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    </div>
+
+
+                    <!-- Remember + Forgot -->
+                    <div class="login-options">
+
+                        <label>
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+
+                        <a href="#">
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+                    <button type="submit" class="login-btn">
+                        Login
+                    </button>
+
+                </form>
+
+
+                <!-- Register -->
+                <p class="signup-text">
+
+                    Don't have an account?
+
+                    <a href="{{ url_for('register') }}">
+                        Sign Up
+                    </a>
+
+                </p>
+
+
+                <!-- Back Home -->
+                <a href="{{ url_for('home') }}" class="back-home">
+                    ← Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

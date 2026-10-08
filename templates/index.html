@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="" en">
+<html>
+
+<head>
+    <title>Resumate
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <img class="logo" src="{{ url_for('static', filename='images/logo_resume.png') }}" alt="logo">
+    <a class="log" href="{{ url_for('home') }}">Home</a>
+    <a class="log" href="{{ url_for('features') }}">Features</a>
+    <a class="log" href="{{ url_for('workflow') }}">How It Works</a>
+    <a class="log" href="{{ url_for('about') }}">About</a>
+    <button class="start" onclick="location.href='/upload'">
+        Get Started
+    </button>
+
+    <section class="hero">
+
+        <div class="hero-text">
+            <div class="ai-badge"> AI-Powered ✨</div>
+
+            <h2>
+                Smarter Resume,<br>
+                Better <span>Opportunities</span>
+            </h2>
+
+            <p>
+                Get intelligent insights and personalized suggestions
+                to make your resume stand out.
+            </p>
+
+            <button onclick="location.href='/upload'">
+                Analyze Resume
+            </button>
+        </div>
+
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/dashboard_image.png') }}" alt="AI Resume Analysis">
+        </div>
+
+    </section>
+
+</body>
+
+</html>
